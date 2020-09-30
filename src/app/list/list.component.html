@@ -1,0 +1,15 @@
+<h2>Product List</h2>
+<table>
+  <tr>
+    <td>id</td>
+    <td>name</td>
+    <td>description</td>
+  </tr>
+  <tr *ngFor="let p of products">
+    <td>{{p.id}}</td>
+    <td>{{p.name}}</td>
+    <td>{{p.description}}</td>
+    <td><button [routerLink]="['/listProduct' , p.id]">edit</button></td>
+  </tr>
+</table>
+<router-outlet></router-outlet>
